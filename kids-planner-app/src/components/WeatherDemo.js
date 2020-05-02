@@ -10,13 +10,13 @@ function Weather() {
 	useEffect(() => {
 		axios(url)
 			.then((response) => {
-				console.log(response);
-				setWeatherData(response.data.weather[0].description);
-				setTemp(Math.round(response.data.main.temp));
+				setWeatherData('snow');
+				setTemp(2);
 			})
 			.catch(console.error);
 	}, [url]);
-
+	console.log(weatherData);
+	console.log(temp);
 	if (!weatherData) {
 		return null;
 	}
@@ -25,7 +25,7 @@ function Weather() {
 	if (temp >= 85) {
 		tempDescritpion = `It's ${temp} F outside! That's pretty hot, drink lots of water and stay in the shade!`;
 	} else if (temp >= 70 && temp <= 84) {
-		tempDescritpion = `It's ${temp} F outside! That's pretty nice!`;
+		tempDescritpion = `It's ${temp} F outside! That's a pretty nice!`;
 	} else if (temp >= 50 && temp <= 69) {
 		tempDescritpion = `It's ${temp} F outside! Might start to get chilly, long sleeve and sweater kind of day`;
 	} else if (temp >= 32 && temp <= 49) {
@@ -37,14 +37,11 @@ function Weather() {
 	if (weatherData.includes('rain')) {
 		return (
 			<>
-				<h1 className='temp'>Temp = 70F</h1>
+				<h1 className='temp'>{tempDescritpion}</h1>
 				<p className='rain'>
-					{/* <h1>{Math.round(weatherData.main.temp)} F</h1>
-				<h1>{weatherData.weather[0].description}</h1> */}
+					
 				</p>
-				<h2 className='weatherDescription'>
-					Looks like it might rain today, don't forget your rain gear!
-				</h2>
+				<h2>Looks like it might rain today, don't forget your rain gear!</h2>
 			</>
 		);
 	} else if (weatherData.includes('snow')) {
@@ -52,7 +49,7 @@ function Weather() {
 			<>
 				<h1 className='temp'>{tempDescritpion}</h1>
 				<p className='snow'> </p>
-				<h2 className='weatherDescription'>
+				<h2>
 					Looks like it's going to snow today! Don't forget your snow gear!
 				</h2>
 			</>
@@ -62,51 +59,16 @@ function Weather() {
 			<>
 				<h1 className='temp'>{tempDescritpion}</h1>
 				<p className='clouds'> </p>
-				<h2 className='weatherDescription'>
+				<h2>
 					Looks like it's going to be cloudy, maybe you should bring a sweater
 					just in case!
 				</h2>
 			</>
 		);
 	}
-	// } else if (weatherData.weather[0].description.includes('cloud')) {
-	// 	return (
-	// 		<div className='cloud'>
-	// 			<h1>clouds</h1>
-	// 			<h1>{Math.round(weatherData.main.temp)} F</h1>
-	// 		</div>
-	// 	);
-	// } else if (weatherData.weather[0].description.includes('snow')) {
-	// 	return (
-	// 		<div className='snow'>
-	// 			<h1>Snow</h1>
-	// 			<h1>{Math.round(weatherData.main.temp)} F</h1>
-	// 		</div>
-	// 	);
-	// } else {
-	// 	return (
-	// 		<div className='clear'>
-	// 			<h1>clear</h1>
-	// 			<h1>{Math.round(weatherData.main.temp)} F</h1>
-	// 		</div>
-	// 	);
+
 }
 
-// return (
-// 	<>
-// 		{weatherData.weather[0].description.includes('rain') ? (
-// 			<div className='rain'>
-// 				<h1>Rain</h1>
-// 				<h1>{Math.round(weatherData.main.temp)} F</h1>
-// 				<h1>{weatherData.weather[0].description}</h1>
-// 			</div>
-// 		) : (
-// 			<div className='clear'>
-// 				<h1>{Math.round(weatherData.main.temp)} F</h1>
-// 				<h1>{weatherData.weather[0].description}</h1>
-// 			</div>
-// 		)}
-// 	</>
-// );
+
 
 export default Weather;

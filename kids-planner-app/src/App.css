@@ -1,73 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Schoolbell&display=swap');
+
+
 nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10%;
-  background-color: aqua;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 50px;
+  background-color:#353843;
+}
+.logo{
+  color: #0fb5e6;
 }
 
-.nav-links{
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.nav-links {
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
   list-style: none;
+  text-decoration: none;
+  
+  color: #ef654a;
 }
+li {
+  text-decoration: none;
+  color: #ef654a;
+}
+
 @keyframes raining {
-  0% {background-image: url("./images/rain1phone.png");}
-  33.33% {background-image: url("./images/rain4.png");}
-  66.66% {background-image: url("./images/rain2.png");}
-  100% {background-image: url("./images/rain3.png");}
+	0% {
+		background-image: url('./images/rain1phone.png');
+	}
+	33.33% {
+		background-image: url('./images/rain4.png');
+	}
+	66.66% {
+		background-image: url('./images/rain2.png');
+	}
+	100% {
+		background-image: url('./images/rain3.png');
+	}
 }
 .rain {
-  display: flex;
-  animation-name: raining;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  height: 300px;
+	display: flex;
+	animation-name: raining;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	height: 300px;
+}
+
+@keyframes snowing {
+	0% {
+		background-image: url('./images/snow1.png');
+	}
+	33.33% {
+		background-image: url('./images/snow2.png');
+	}
+	66.66% {
+		background-image: url('./images/snow3.png');
+	}
+	100% {
+		background-image: url('./images/snow4.png');
+	}
+}
+
+.snow {
+	animation-name: snowing;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	height: 300px;
+}
+
+@keyframes clouds {
+	0% {
+		background-image: url('./images/cloud1.png');
+	}
+	33.33% {
+		background-image: url('./images/cloud2.png');
+	}
+	66.66% {
+		background-image: url('./images/cloud3.png');
+	}
+	100% {
+		background-image: url('./images/cloud4.png');
+	}
+}
+
+.clouds {
+	display: flex;
+	animation-name: clouds;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	background-repeat: no-repeat;
+	background-position: center;
+  height: 191px;
+  
+
+}
+.weatherDescription {
+  color:#d3d6c3;
+   text-align: center;
+  font-size: 30px;
+  font-family: 'Schoolbell', cursive;
+}
+.temp{
+  text-align: center;
+  font-size: px;
+  padding-top: 10px;
+  color: #d3d6c3;
+  font-family: 'Schoolbell', cursive;
 }
 
 /* TODO CSS */
 
 body {
-  background-color: dodgerblue;
+	background-color:#23a4a4;
 }
 
 .todo-div {
-  background-color: blue;
-  min-height: 500px;
-  width: 400px;
-  margin: 40px auto;
+	background-color: #353843;
+	min-height: 500px;
+	width: 400px;
+	margin: 40px auto;
 }
 
-#todo-form input{
-  background-color: cadetblue;
-  border: 0;
-  border-radius: 5px ;
-  width: 200px;
-  height: 50px;
-  padding: 0 20px;
-  margin: 20px;
-  font-size: 18px;
-  color: white;
+#todo-form input {
+	background-color: cadetblue;
+	border: 0;
+	border-radius: 5px;
+	width: 200px;
+	height: 50px;
+	padding: 0 20px;
+	margin: 20px;
+	font-size: 18px;
+	color: white;
 }
-#todo-form ::placeholder{
-  color: azure;
+#todo-form ::placeholder {
+	color: azure;
 }
 
-#todo-form input:focus{
-  outline: none;
+#todo-form input:focus {
+	outline: none;
 }
 #todo-form button {
-  height: 50px;
-  width: 80px;
-  border-radius:5px;
-  border: 0;
-  background-color: violet;
-  cursor: pointer;
-  font-weight: bolder;
-  color: aliceblue;
+	height: 50px;
+	width: 80px;
+	border-radius: 5px;
+	border: 0;
+	background-color: #0fb5e6;
+	cursor: pointer;
+	font-weight: bolder;
+	color: aliceblue;
 }

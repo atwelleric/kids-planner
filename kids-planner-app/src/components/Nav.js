@@ -5,7 +5,7 @@ import '../App.css';
 function Nav() {
 	return (
 		<nav>
-			<h1>Nav</h1>
+			<h1 className="logo">Kids Day</h1>
 			<ul className='nav-links'>
 				<Link to='/'>
 					<li>Home</li>
