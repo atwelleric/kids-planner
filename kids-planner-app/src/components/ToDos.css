@@ -1,12 +1,21 @@
 .list {
 	color: wheat;
-	width: 300px;
-	background-color: turquoise;
-	height: 50px;
+	width: 280px;
+	background-color: rgba(15, 181, 230, 0.5);
+	height: 45px;
 	margin: 20px auto;
 	border-radius: 5px;
 }
 
 .list p {
 	padding: 10px;
+	position: relative;
+}
+.checkMark {
+	color: chartreuse;
+	position: absolute;
+	right: 10px;
+	cursor: pointer;
+	margin: 0 5px;
+	font-size: 15px;
 }

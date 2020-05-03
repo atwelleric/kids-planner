@@ -13,6 +13,18 @@ class ToDos extends React.Component {
 			},
 		};
 	}
+	saveData = () => {
+		localStorage.setItem(this.state.todo, JSON.stringify(this.state.todo));
+	};
+	retrieveData = () => {
+		let retrievedData = localStorage.getItem(this.state.todo);
+		let parsedData = retrievedData
+			? JSON.parse(retrievedData)
+			: this.state.todo;
+		this.setState({
+			todo: parsedData,
+		});
+	};
 	handleChange = (event) => {
 		event.preventDefault();
 		this.setState({
@@ -37,7 +49,16 @@ class ToDos extends React.Component {
 			});
 		}
 	};
+
+	markDone = (key) => {
+		const filteredTodos = this.state.todo.filter((todo) => todo.key !== key);
+		this.setState({
+			todo: filteredTodos,
+		});
+		this.saveData();
+	};
 	render() {
+		console.log(this.state.todo);
 		return (
 			<div className='todo-div'>
 				<header>
@@ -52,7 +73,12 @@ class ToDos extends React.Component {
 						<button type='submit'>Submit</button>
 					</form>
 				</header>
-				<ToDoList todo={this.state.todo} />
+				<ToDoList
+					todo={this.state.todo}
+					markDone={this.markDone}
+					save={this.saveData}
+					load={this.retrieveData}
+				/>
 			</div>
 		);
 	}

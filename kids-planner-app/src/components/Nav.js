@@ -17,10 +17,14 @@ function Nav() {
 					</li>
 				</Link>
 				<Link to='/weather'>
-					<li><FontAwesomeIcon icon={faSun}/></li>
+					<li>
+						<FontAwesomeIcon icon={faSun} />
+					</li>
 				</Link>
 				<Link to='/todos'>
-					<li><FontAwesomeIcon icon={faClipboardList}/></li>
+					<li>
+						<FontAwesomeIcon icon={faClipboardList} />
+					</li>
 				</Link>
 			</ul>
 		</nav>

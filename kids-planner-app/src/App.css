@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Schoolbell&display=swap');
 
-
 nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	height: 50px;
-  background-color:#353843;
+	background-color: #353843;
 }
-.logo{
-  color: #0fb5e6;
+.logo {
+	color: #0fb5e6;
 }
 
 .nav-links {
@@ -17,22 +16,21 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-  list-style: none;
-  text-decoration: none;
-  
-  color: #ef654a;
+	list-style: none;
+	text-decoration: none;
+
+	color: #ef654a;
 }
 li {
-  text-decoration: none;
-  color: #ef654a;
+	text-decoration: none;
+	color: #ef654a;
 }
-.home-page-header{
+.home-page-header {
 	padding: 10px;
 }
 .home-span {
 	color: #ef654a;
 	text-decoration: underline solid #353843;
-	
 }
 
 @keyframes raining {
@@ -107,40 +105,38 @@ li {
 	animation-iteration-count: infinite;
 	background-repeat: no-repeat;
 	background-position: center;
-  height: 191px;
-  
-
+	height: 191px;
 }
 .clear {
-	background-image: url("./images/cloud1.png");
+	background-image: url('./images/clear.png');
 	height: 191px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .weatherDescription {
-  color:#d3d6c3;
-   text-align: center;
-  font-size: 30px;
-  font-family: 'Schoolbell', cursive;
+	color: #d3d6c3;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Schoolbell', cursive;
 }
-.temp{
-  text-align: center;
-  font-size: px;
-  padding-top: 10px;
-  color: #d3d6c3;
-  font-family: 'Schoolbell', cursive;
+.temp {
+	text-align: center;
+	font-size: px;
+	padding-top: 10px;
+	color: #d3d6c3;
+	font-family: 'Schoolbell', cursive;
 }
 
 /* TODO CSS */
 
 body {
-	background-color:#23a4a4;
+	background-color: #23a4a4;
 }
 
 .todo-div {
 	background-color: #353843;
 	min-height: 500px;
-	width: 400px;
+	width: 300px;
 	margin: 40px auto;
 }
 
@@ -148,9 +144,9 @@ body {
 	background-color: cadetblue;
 	border: 0;
 	border-radius: 5px;
-	width: 200px;
-	height: 50px;
-	padding: 0 20px;
+	width: 150px;
+	height: 30px;
+	padding: 0 15px;
 	margin: 20px;
 	font-size: 18px;
 	color: white;
@@ -163,8 +159,8 @@ body {
 	outline: none;
 }
 #todo-form button {
-	height: 50px;
-	width: 80px;
+	height: 30px;
+	width: 60px;
 	border-radius: 5px;
 	border: 0;
 	background-color: #0fb5e6;
