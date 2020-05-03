@@ -26,6 +26,14 @@ li {
   text-decoration: none;
   color: #ef654a;
 }
+.home-page-header{
+	padding: 10px;
+}
+.home-span {
+	color: #ef654a;
+	text-decoration: underline solid #353843;
+	
+}
 
 @keyframes raining {
 	0% {
@@ -102,6 +110,12 @@ li {
   height: 191px;
   
 
+}
+.clear {
+	background-image: url("./images/cloud1.png");
+	height: 191px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .weatherDescription {
   color:#d3d6c3;

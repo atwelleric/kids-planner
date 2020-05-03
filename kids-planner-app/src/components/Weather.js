@@ -17,7 +17,7 @@ function Weather() {
 			.catch(console.error);
 	}, [url]);
 
-	if (!weatherData) {
+	if (!weatherData || !temp) {
 		return null;
 	}
 
@@ -65,6 +65,16 @@ function Weather() {
 				<h2 className='weatherDescription'>
 					Looks like it's going to be cloudy, maybe you should bring a sweater
 					just in case!
+				</h2>
+			</>
+		);
+	} else {
+		return (
+			<>
+				<h1 className='temp'>{tempDescritpion}</h1>
+				<p className='clear'> </p>
+				<h2 className='weatherDescription'>
+					Clear sky's right now! The sun is shining!
 				</h2>
 			</>
 		);
