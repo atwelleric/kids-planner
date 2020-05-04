@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.css';
 
+// Hou comment: see my comment in WeatherDemo.js. Also make sure to remove any unused code from here.
+
 function Weather() {
 	const [weatherData, setWeatherData] = useState(null);
 	const [temp, setTemp] = useState(null);
@@ -51,6 +53,7 @@ function Weather() {
 		return (
 			<>
 				<h1 className='temp'>{tempDescritpion}</h1>
+				{/* Hou comment: can we remove empty tags*/}
 				<p className='snow'> </p>
 				<h2 className='weatherDescription'>
 					Looks like it's going to snow today! Don't forget your snow gear!
