@@ -2,6 +2,7 @@ import React from 'react';
 import ToDoList from './ToDoList';
 import './ToDos.css';
 
+// Hou comment: as an extra challenge, consider refactoring this component to use hooks
 class ToDos extends React.Component {
 	constructor(props) {
 		super(props);
@@ -14,6 +15,7 @@ class ToDos extends React.Component {
 		};
 	}
 	saveData = () => {
+		// Hou comment: localStorage is a nice workaround in the absence of a database!
 		localStorage.setItem(this.state.todo, JSON.stringify(this.state.todo));
 	};
 	retrieveData = () => {
@@ -38,7 +40,9 @@ class ToDos extends React.Component {
 	addItem = (event) => {
 		event.preventDefault();
 		const newTodo = this.state.currentTodos;
+		// if (newTodo.text.length > 0) might be better here, since null and undefined would also pass the conditional on line 43
 		if (newTodo.text !== '') {
+			// Hou comment: great job with using spread operator to create a shallow copy of state!
 			const newTodos = [...this.state.todo, newTodo];
 			this.setState({
 				todo: newTodos,
@@ -58,6 +62,7 @@ class ToDos extends React.Component {
 		this.saveData();
 	};
 	render() {
+		// Hou comment: make sure to remove all console.log's from your codebase
 		console.log(this.state.todo);
 		return (
 			<div className='todo-div'>

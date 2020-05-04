@@ -8,6 +8,7 @@ function ToDoList(props) {
 	const todoList = todo.map((todo) => {
 		return (
 			<div className='list' key={todo.key}>
+				{/* Hou comment: consider removing the p tags */}
 				<p>
 					{todo.text}
 					<span className='checkMark'>
