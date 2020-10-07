@@ -1,13 +1,13 @@
 # kids-planner
 ---							
 ## **Project description**
-	The idea for my project is to create a daily planner type app for children. 
-	The thought is, kids usually have no idea what the weather will be like today without asking, 
-	or what they are doing that day without checking with an adult.   While talking to my daughter 
-	she absolutely loved the idea.   The parents will be able to set schedule events like school, 
-	homework, girl scouts, and the kids will be able to make schedule suggestions for approval by 
-	the parents.   I will be implementing a weather api and attempting to make the information more 
-	accessible to children (instead of 70%  chance of rain today,   “Looks like it may rain, don’t forget an umbrella!)
+The idea for my project is to create a daily planner type app for children. 
+The thought is, kids usually have no idea what the weather will be like today without asking, 
+or what they are doing that day without checking with an adult.   While talking to my daughter 
+she absolutely loved the idea.   The parents will be able to set schedule events like school, 
+homework, girl scouts, and the kids will be able to make schedule suggestions for approval by 
+the parents.   I will be implementing a weather api and attempting to make the information more 
+accessible to children (instead of 70%  chance of rain today,   “Looks like it may rain, don’t forget an umbrella!)
   
   
   ![Project Proposal](https://github.com/atwelleric/projectTwo/blob/master/projectTwoProposal.jpg)
@@ -33,10 +33,10 @@ or random facts everyday. Should be easy to implement
 - Different backgrounds that can change depending on what is returned from the weather api.
 
 ## **Sample api data:** 
-`(this was a quick search from one of the weather apis suggested, I have not settled on which API 
+(this was a quick search from one of the weather apis suggested, I have not settled on which API 
 i will use for this project yet.)
 
-{
+`{
 id: 6670747562934272,
 weather_state_name: "Light Cloud",
 weather_state_abbr: "lc",
